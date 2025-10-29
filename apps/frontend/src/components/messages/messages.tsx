@@ -28,7 +28,7 @@ export interface Message {
   updatedAt: string;
   deletedAt: any;
 }
-import { Textarea } from '@gitroom/react/form/textarea';
+import { Textarea } from '@kuku/react/form/textarea';
 import clsx from 'clsx';
 import useSWR from 'swr';
 import {
@@ -42,19 +42,19 @@ import {
   useState,
 } from 'react';
 import { useParams } from 'next/navigation';
-import { useFetch } from '@gitroom/helpers/utils/custom.fetch';
+import { useFetch } from '@kuku/helpers/utils/custom.fetch';
 import { reverse } from 'lodash';
 import { FormProvider, SubmitHandler, useForm } from 'react-hook-form';
 import { classValidatorResolver } from '@hookform/resolvers/class-validator';
-import { AddMessageDto } from '@gitroom/nestjs-libraries/dtos/messages/add.message';
-import { makeId } from '@gitroom/nestjs-libraries/services/make.is';
-import { useUser } from '@gitroom/frontend/components/layout/user.context';
-import { OrderTopActions } from '@gitroom/frontend/components/marketplace/order.top.actions';
-import { MarketplaceProvider } from '@gitroom/frontend/components/marketplace/marketplace.provider';
-import { SpecialMessage } from '@gitroom/frontend/components/marketplace/special.message';
-import { usePageVisibility } from '@gitroom/react/helpers/use.is.visible';
-import { useT } from '@gitroom/react/translation/get.transation.service.client';
-import { newDayjs } from '@gitroom/frontend/components/layout/set.timezone';
+import { AddMessageDto } from '@kuku/nestjs-libraries/dtos/messages/add.message';
+import { makeId } from '@kuku/nestjs-libraries/services/make.is';
+import { useUser } from '@kuku/frontend/components/layout/user.context';
+import { OrderTopActions } from '@kuku/frontend/components/marketplace/order.top.actions';
+import { MarketplaceProvider } from '@kuku/frontend/components/marketplace/marketplace.provider';
+import { SpecialMessage } from '@kuku/frontend/components/marketplace/special.message';
+import { usePageVisibility } from '@kuku/react/helpers/use.is.visible';
+import { useT } from '@kuku/react/translation/get.transation.service.client';
+import { newDayjs } from '@kuku/frontend/components/layout/set.timezone';
 export const Message: FC<{
   message: Message;
   seller: SellerBuyer;

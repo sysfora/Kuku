@@ -1,13 +1,13 @@
-import { CreateOrgUserDto } from '@gitroom/nestjs-libraries/dtos/auth/create.org.user.dto';
+import { CreateOrgUserDto } from '@kuku/nestjs-libraries/dtos/auth/create.org.user.dto';
 import { Injectable } from '@nestjs/common';
-import { OrganizationRepository } from '@gitroom/nestjs-libraries/database/prisma/organizations/organization.repository';
-import { NotificationService } from '@gitroom/nestjs-libraries/database/prisma/notifications/notification.service';
-import { AddTeamMemberDto } from '@gitroom/nestjs-libraries/dtos/settings/add.team.member.dto';
-import { AuthService } from '@gitroom/helpers/auth/auth.service';
+import { OrganizationRepository } from '@kuku/nestjs-libraries/database/prisma/organizations/organization.repository';
+import { NotificationService } from '@kuku/nestjs-libraries/database/prisma/notifications/notification.service';
+import { AddTeamMemberDto } from '@kuku/nestjs-libraries/dtos/settings/add.team.member.dto';
+import { AuthService } from '@kuku/helpers/auth/auth.service';
 import dayjs from 'dayjs';
-import { makeId } from '@gitroom/nestjs-libraries/services/make.is';
+import { makeId } from '@kuku/nestjs-libraries/services/make.is';
 import { Organization } from '@prisma/client';
-import { AutopostService } from '@gitroom/nestjs-libraries/database/prisma/autopost/autopost.service';
+import { AutopostService } from '@kuku/nestjs-libraries/database/prisma/autopost/autopost.service';
 
 @Injectable()
 export class OrganizationService {

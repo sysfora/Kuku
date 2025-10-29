@@ -1,13 +1,13 @@
 import { FC, useCallback, useMemo, useState } from 'react';
 import { ReactTags } from 'react-tag-autocomplete';
-import { useFetch } from '@gitroom/helpers/utils/custom.fetch';
+import { useFetch } from '@kuku/helpers/utils/custom.fetch';
 import useSWR from 'swr';
-import { TopTitle } from '@gitroom/frontend/components/launches/helpers/top.title.component';
-import { Input } from '@gitroom/react/form/input';
-import { ColorPicker } from '@gitroom/react/form/color.picker';
-import { Button } from '@gitroom/react/form/button';
+import { TopTitle } from '@kuku/frontend/components/launches/helpers/top.title.component';
+import { Input } from '@kuku/react/form/input';
+import { ColorPicker } from '@kuku/react/form/color.picker';
+import { Button } from '@kuku/react/form/button';
 import { uniqBy } from 'lodash';
-import { useT } from '@gitroom/react/translation/get.transation.service.client';
+import { useT } from '@kuku/react/translation/get.transation.service.client';
 export const TagsComponent: FC<{
   name: string;
   label: string;

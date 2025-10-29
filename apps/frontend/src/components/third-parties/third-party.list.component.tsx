@@ -1,16 +1,16 @@
 'use client';
 
-import { useFetch } from '@gitroom/helpers/utils/custom.fetch';
+import { useFetch } from '@kuku/helpers/utils/custom.fetch';
 import useSWR from 'swr';
 import React, { FC, useCallback, useState } from 'react';
-import { Button } from '@gitroom/react/form/button';
+import { Button } from '@kuku/react/form/button';
 import { useRouter } from 'next/navigation';
-import { useModals } from '@gitroom/frontend/components/layout/new-modal';
+import { useModals } from '@kuku/frontend/components/layout/new-modal';
 import { FieldValues, FormProvider, useForm } from 'react-hook-form';
-import { useT } from '@gitroom/react/translation/get.transation.service.client';
-import { Input } from '@gitroom/react/form/input';
-import { useToaster } from '@gitroom/react/toaster/toaster';
-import { ModalWrapperComponent } from '@gitroom/frontend/components/new-launch/modal.wrapper.component';
+import { useT } from '@kuku/react/translation/get.transation.service.client';
+import { Input } from '@kuku/react/form/input';
+import { useToaster } from '@kuku/react/toaster/toaster';
+import { ModalWrapperComponent } from '@kuku/frontend/components/new-launch/modal.wrapper.component';
 
 export const ApiModal: FC<{
   identifier: string;

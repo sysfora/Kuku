@@ -1,11 +1,11 @@
-import { internalFetch } from '@gitroom/helpers/utils/internal.fetch';
+import { internalFetch } from '@kuku/helpers/utils/internal.fetch';
 export const dynamic = 'force-dynamic';
-import { Register } from '@gitroom/frontend/components/auth/register';
+import { Register } from '@kuku/frontend/components/auth/register';
 import { Metadata } from 'next';
-import { isGeneralServerSide } from '@gitroom/helpers/utils/is.general.server.side';
+import { isGeneralServerSide } from '@kuku/helpers/utils/is.general.server.side';
 import Link from 'next/link';
-import { getT } from '@gitroom/react/translation/get.translation.service.backend';
-import { LoginWithOidc } from '@gitroom/frontend/components/auth/login.with.oidc';
+import { getT } from '@kuku/react/translation/get.translation.service.backend';
+import { LoginWithOidc } from '@kuku/frontend/components/auth/login.with.oidc';
 export const metadata: Metadata = {
   title: `${isGeneralServerSide() ? 'Kuku' : 'Kuku'} Register`,
   description: '',

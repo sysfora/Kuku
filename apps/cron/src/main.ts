@@ -1,4 +1,4 @@
-import { initializeSentry } from '@gitroom/nestjs-libraries/sentry/initialize.sentry';
+import { initializeSentry } from '@kuku/nestjs-libraries/sentry/initialize.sentry';
 initializeSentry('cron');
 
 import { NestFactory } from '@nestjs/core';

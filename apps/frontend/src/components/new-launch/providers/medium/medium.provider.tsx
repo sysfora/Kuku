@@ -4,14 +4,14 @@ import { FC } from 'react';
 import {
   PostComment,
   withProvider,
-} from '@gitroom/frontend/components/new-launch/providers/high.order.provider';
-import { useSettings } from '@gitroom/frontend/components/launches/helpers/use.values';
-import { Input } from '@gitroom/react/form/input';
-import { MediumPublications } from '@gitroom/frontend/components/new-launch/providers/medium/medium.publications';
-import { MediumTags } from '@gitroom/frontend/components/new-launch/providers/medium/medium.tags';
-import { MediumSettingsDto } from '@gitroom/nestjs-libraries/dtos/posts/providers-settings/medium.settings.dto';
-import { useIntegration } from '@gitroom/frontend/components/launches/helpers/use.integration';
-import { Canonical } from '@gitroom/react/form/canonical';
+} from '@kuku/frontend/components/new-launch/providers/high.order.provider';
+import { useSettings } from '@kuku/frontend/components/launches/helpers/use.values';
+import { Input } from '@kuku/react/form/input';
+import { MediumPublications } from '@kuku/frontend/components/new-launch/providers/medium/medium.publications';
+import { MediumTags } from '@kuku/frontend/components/new-launch/providers/medium/medium.tags';
+import { MediumSettingsDto } from '@kuku/nestjs-libraries/dtos/posts/providers-settings/medium.settings.dto';
+import { useIntegration } from '@kuku/frontend/components/launches/helpers/use.integration';
+import { Canonical } from '@kuku/react/form/canonical';
 
 const MediumSettings: FC = () => {
   const form = useSettings();

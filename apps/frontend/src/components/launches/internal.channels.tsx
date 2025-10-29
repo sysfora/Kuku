@@ -2,14 +2,14 @@ import { FC, useEffect, useState } from 'react';
 import {
   Integrations,
   useCalendar,
-} from '@gitroom/frontend/components/launches/calendar.context';
-import { PickPlatforms } from '@gitroom/frontend/components/launches/helpers/pick.platform.component';
-import { useIntegration } from '@gitroom/frontend/components/launches/helpers/use.integration';
-import { Select } from '@gitroom/react/form/select';
-import { Slider } from '@gitroom/react/form/slider';
-import { useSettings } from '@gitroom/frontend/components/launches/helpers/use.values';
+} from '@kuku/frontend/components/launches/calendar.context';
+import { PickPlatforms } from '@kuku/frontend/components/launches/helpers/pick.platform.component';
+import { useIntegration } from '@kuku/frontend/components/launches/helpers/use.integration';
+import { Select } from '@kuku/react/form/select';
+import { Slider } from '@kuku/react/form/slider';
+import { useSettings } from '@kuku/frontend/components/launches/helpers/use.values';
 import clsx from 'clsx';
-import { useT } from '@gitroom/react/translation/get.transation.service.client';
+import { useT } from '@kuku/react/translation/get.transation.service.client';
 const delayOptions = [
   {
     name: 'Immediately',

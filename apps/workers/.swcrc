@@ -7,17 +7,17 @@
       "dynamicImport": true
     },
     "target": "es2020",
-    "baseUrl": "/Users/nevodavid/Projects/gitroom",
+    "baseUrl": "/Users/nevodavid/Projects/kuku",
     "paths": {
-      "@gitroom/backend/*": ["apps/backend/src/*"],
-      "@gitroom/cron/*": ["apps/cron/src/*"],
-      "@gitroom/frontend/*": ["apps/frontend/src/*"],
-      "@gitroom/helpers/*": ["libraries/helpers/src/*"],
-      "@gitroom/nestjs-libraries/*": ["libraries/nestjs-libraries/src/*"],
-      "@gitroom/react/*": ["libraries/react-shared-libraries/src/*"],
-      "@gitroom/plugins/*": ["libraries/plugins/src/*"],
-      "@gitroom/workers/*": ["apps/workers/src/*"],
-      "@gitroom/extension/*": ["apps/extension/src/*"]
+      "@kuku/backend/*": ["apps/backend/src/*"],
+      "@kuku/cron/*": ["apps/cron/src/*"],
+      "@kuku/frontend/*": ["apps/frontend/src/*"],
+      "@kuku/helpers/*": ["libraries/helpers/src/*"],
+      "@kuku/nestjs-libraries/*": ["libraries/nestjs-libraries/src/*"],
+      "@kuku/react/*": ["libraries/react-shared-libraries/src/*"],
+      "@kuku/plugins/*": ["libraries/plugins/src/*"],
+      "@kuku/workers/*": ["apps/workers/src/*"],
+      "@kuku/extension/*": ["apps/extension/src/*"]
     },
     "keepClassNames": true,
     "transform": {

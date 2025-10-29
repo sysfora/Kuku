@@ -1,4 +1,4 @@
-import { MediaDto } from '@gitroom/nestjs-libraries/dtos/media/media.dto';
+import { MediaDto } from '@kuku/nestjs-libraries/dtos/media/media.dto';
 import {
   IsOptional,
   IsString,

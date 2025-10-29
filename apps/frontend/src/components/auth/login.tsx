@@ -1,20 +1,20 @@
 'use client';
 
 import { useForm, SubmitHandler, FormProvider } from 'react-hook-form';
-import { useFetch } from '@gitroom/helpers/utils/custom.fetch';
+import { useFetch } from '@kuku/helpers/utils/custom.fetch';
 import Link from 'next/link';
-import { Button } from '@gitroom/react/form/button';
-import { Input } from '@gitroom/react/form/input';
+import { Button } from '@kuku/react/form/button';
+import { Input } from '@kuku/react/form/input';
 import { useMemo, useState } from 'react';
 import { classValidatorResolver } from '@hookform/resolvers/class-validator';
-import { LoginUserDto } from '@gitroom/nestjs-libraries/dtos/auth/login.user.dto';
-import { GithubProvider } from '@gitroom/frontend/components/auth/providers/github.provider';
-import { OauthProvider } from '@gitroom/frontend/components/auth/providers/oauth.provider';
-import { GoogleProvider } from '@gitroom/frontend/components/auth/providers/google.provider';
-import { useVariables } from '@gitroom/react/helpers/variable.context';
-import { FarcasterProvider } from '@gitroom/frontend/components/auth/providers/farcaster.provider';
-import WalletProvider from '@gitroom/frontend/components/auth/providers/wallet.provider';
-import { useT } from '@gitroom/react/translation/get.transation.service.client';
+import { LoginUserDto } from '@kuku/nestjs-libraries/dtos/auth/login.user.dto';
+import { GithubProvider } from '@kuku/frontend/components/auth/providers/github.provider';
+import { OauthProvider } from '@kuku/frontend/components/auth/providers/oauth.provider';
+import { GoogleProvider } from '@kuku/frontend/components/auth/providers/google.provider';
+import { useVariables } from '@kuku/react/helpers/variable.context';
+import { FarcasterProvider } from '@kuku/frontend/components/auth/providers/farcaster.provider';
+import WalletProvider from '@kuku/frontend/components/auth/providers/wallet.provider';
+import { useT } from '@kuku/react/translation/get.transation.service.client';
 type Inputs = {
   email: string;
   password: string;

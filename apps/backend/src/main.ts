@@ -1,7 +1,7 @@
-import { initializeSentry } from '@gitroom/nestjs-libraries/sentry/initialize.sentry';
+import { initializeSentry } from '@kuku/nestjs-libraries/sentry/initialize.sentry';
 initializeSentry('backend', true);
 
-import { loadSwagger } from '@gitroom/helpers/swagger/load.swagger';
+import { loadSwagger } from '@kuku/helpers/swagger/load.swagger';
 import { json } from 'express';
 
 process.env.TZ = 'UTC';
@@ -11,10 +11,10 @@ import { Logger, ValidationPipe } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 
-import { SubscriptionExceptionFilter } from '@gitroom/backend/services/auth/permissions/subscription.exception';
-import { HttpExceptionFilter } from '@gitroom/nestjs-libraries/services/exception.filter';
-import { ConfigurationChecker } from '@gitroom/helpers/configuration/configuration.checker';
-import { startMcp } from '@gitroom/nestjs-libraries/chat/start.mcp';
+import { SubscriptionExceptionFilter } from '@kuku/backend/services/auth/permissions/subscription.exception';
+import { HttpExceptionFilter } from '@kuku/nestjs-libraries/services/exception.filter';
+import { ConfigurationChecker } from '@kuku/helpers/configuration/configuration.checker';
+import { startMcp } from '@kuku/nestjs-libraries/chat/start.mcp';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, {

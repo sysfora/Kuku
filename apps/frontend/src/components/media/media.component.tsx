@@ -10,35 +10,35 @@ import React, {
   useRef,
   useState,
 } from 'react';
-import { Button } from '@gitroom/react/form/button';
+import { Button } from '@kuku/react/form/button';
 import useSWR from 'swr';
-import { useFetch } from '@gitroom/helpers/utils/custom.fetch';
+import { useFetch } from '@kuku/helpers/utils/custom.fetch';
 import { Media } from '@prisma/client';
-import { useMediaDirectory } from '@gitroom/react/helpers/use.media.directory';
-import { useSettings } from '@gitroom/frontend/components/launches/helpers/use.values';
+import { useMediaDirectory } from '@kuku/react/helpers/use.media.directory';
+import { useSettings } from '@kuku/frontend/components/launches/helpers/use.values';
 import EventEmitter from 'events';
-import { TopTitle } from '@gitroom/frontend/components/launches/helpers/top.title.component';
+import { TopTitle } from '@kuku/frontend/components/launches/helpers/top.title.component';
 import clsx from 'clsx';
-import { VideoFrame } from '@gitroom/react/helpers/video.frame';
-import { MultipartFileUploader } from '@gitroom/frontend/components/media/new.uploader';
+import { VideoFrame } from '@kuku/react/helpers/video.frame';
+import { MultipartFileUploader } from '@kuku/frontend/components/media/new.uploader';
 import dynamic from 'next/dynamic';
-import { useUser } from '@gitroom/frontend/components/layout/user.context';
-import { AiImage } from '@gitroom/frontend/components/launches/ai.image';
+import { useUser } from '@kuku/frontend/components/layout/user.context';
+import { AiImage } from '@kuku/frontend/components/launches/ai.image';
 import Image from 'next/image';
-import { DropFiles } from '@gitroom/frontend/components/layout/drop.files';
-import { deleteDialog } from '@gitroom/react/helpers/delete.dialog';
-import { useT } from '@gitroom/react/translation/get.transation.service.client';
-import { ThirdPartyMedia } from '@gitroom/frontend/components/third-parties/third-party.media';
+import { DropFiles } from '@kuku/frontend/components/layout/drop.files';
+import { deleteDialog } from '@kuku/react/helpers/delete.dialog';
+import { useT } from '@kuku/react/translation/get.transation.service.client';
+import { ThirdPartyMedia } from '@kuku/frontend/components/third-parties/third-party.media';
 import { ReactSortable } from 'react-sortablejs';
 import {
   MediaComponentInner,
   useMediaSettings,
-} from '@gitroom/frontend/components/launches/helpers/media.settings.component';
-import { useLaunchStore } from '@gitroom/frontend/components/new-launch/store';
-import { AiVideo } from '@gitroom/frontend/components/launches/ai.video';
-import { useModals } from '@gitroom/frontend/components/layout/new-modal';
+} from '@kuku/frontend/components/launches/helpers/media.settings.component';
+import { useLaunchStore } from '@kuku/frontend/components/new-launch/store';
+import { AiVideo } from '@kuku/frontend/components/launches/ai.video';
+import { useModals } from '@kuku/frontend/components/layout/new-modal';
 const Polonto = dynamic(
-  () => import('@gitroom/frontend/components/launches/polonto')
+  () => import('@kuku/frontend/components/launches/polonto')
 );
 const showModalEmitter = new EventEmitter();
 export const Pagination: FC<{

@@ -2,18 +2,18 @@
 
 import '@neynar/react/dist/style.css';
 import React, { FC, useCallback, useEffect, useRef, useState } from 'react';
-import { Web3ProviderInterface } from '@gitroom/frontend/components/launches/web3/web3.provider.interface';
-import { TopTitle } from '@gitroom/frontend/components/launches/helpers/top.title.component';
-import { useModals } from '@gitroom/frontend/components/layout/new-modal';
-import { useFetch } from '@gitroom/helpers/utils/custom.fetch';
-import { timer } from '@gitroom/helpers/utils/timer';
-import { makeId } from '@gitroom/nestjs-libraries/services/make.is';
-import { Input } from '@gitroom/react/form/input';
-import { Button } from '@gitroom/react/form/button';
+import { Web3ProviderInterface } from '@kuku/frontend/components/launches/web3/web3.provider.interface';
+import { TopTitle } from '@kuku/frontend/components/launches/helpers/top.title.component';
+import { useModals } from '@kuku/frontend/components/layout/new-modal';
+import { useFetch } from '@kuku/helpers/utils/custom.fetch';
+import { timer } from '@kuku/helpers/utils/timer';
+import { makeId } from '@kuku/nestjs-libraries/services/make.is';
+import { Input } from '@kuku/react/form/input';
+import { Button } from '@kuku/react/form/button';
 import copy from 'copy-to-clipboard';
-import { useToaster } from '@gitroom/react/toaster/toaster';
-import { useVariables } from '@gitroom/react/helpers/variable.context';
-import { useT } from '@gitroom/react/translation/get.transation.service.client';
+import { useToaster } from '@kuku/react/toaster/toaster';
+import { useVariables } from '@kuku/react/helpers/variable.context';
+import { useT } from '@kuku/react/translation/get.transation.service.client';
 export const TelegramProvider: FC<Web3ProviderInterface> = (props) => {
   const { onComplete, nonce } = props;
   const { telegramBotName } = useVariables();

@@ -1,7 +1,7 @@
 export const dynamic = 'force-dynamic';
-import { LaunchesComponent } from '@gitroom/frontend/components/launches/launches.component';
+import { LaunchesComponent } from '@kuku/frontend/components/launches/launches.component';
 import { Metadata } from 'next';
-import { isGeneralServerSide } from '@gitroom/helpers/utils/is.general.server.side';
+import { isGeneralServerSide } from '@kuku/helpers/utils/is.general.server.side';
 export const metadata: Metadata = {
   title: `${isGeneralServerSide() ? 'Kuku Calendar' : 'Kuku Launches'}`,
   description: '',

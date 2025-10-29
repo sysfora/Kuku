@@ -4,39 +4,39 @@ import {
   Injectable,
   ValidationPipe,
 } from '@nestjs/common';
-import { PostsRepository } from '@gitroom/nestjs-libraries/database/prisma/posts/posts.repository';
-import { CreatePostDto } from '@gitroom/nestjs-libraries/dtos/posts/create.post.dto';
+import { PostsRepository } from '@kuku/nestjs-libraries/database/prisma/posts/posts.repository';
+import { CreatePostDto } from '@kuku/nestjs-libraries/dtos/posts/create.post.dto';
 import dayjs from 'dayjs';
-import { IntegrationManager } from '@gitroom/nestjs-libraries/integrations/integration.manager';
+import { IntegrationManager } from '@kuku/nestjs-libraries/integrations/integration.manager';
 import { Integration, Post, Media, From } from '@prisma/client';
-import { GetPostsDto } from '@gitroom/nestjs-libraries/dtos/posts/get.posts.dto';
-import { NotificationService } from '@gitroom/nestjs-libraries/database/prisma/notifications/notification.service';
+import { GetPostsDto } from '@kuku/nestjs-libraries/dtos/posts/get.posts.dto';
+import { NotificationService } from '@kuku/nestjs-libraries/database/prisma/notifications/notification.service';
 import { capitalize, shuffle, uniq } from 'lodash';
-import { MessagesService } from '@gitroom/nestjs-libraries/database/prisma/marketplace/messages.service';
-import { StripeService } from '@gitroom/nestjs-libraries/services/stripe.service';
-import { CreateGeneratedPostsDto } from '@gitroom/nestjs-libraries/dtos/generator/create.generated.posts.dto';
-import { IntegrationService } from '@gitroom/nestjs-libraries/database/prisma/integrations/integration.service';
-import { makeId } from '@gitroom/nestjs-libraries/services/make.is';
+import { MessagesService } from '@kuku/nestjs-libraries/database/prisma/marketplace/messages.service';
+import { StripeService } from '@kuku/nestjs-libraries/services/stripe.service';
+import { CreateGeneratedPostsDto } from '@kuku/nestjs-libraries/dtos/generator/create.generated.posts.dto';
+import { IntegrationService } from '@kuku/nestjs-libraries/database/prisma/integrations/integration.service';
+import { makeId } from '@kuku/nestjs-libraries/services/make.is';
 import {
   BadBody,
   RefreshToken,
-} from '@gitroom/nestjs-libraries/integrations/social.abstract';
-import { BullMqClient } from '@gitroom/nestjs-libraries/bull-mq-transport-new/client';
-import { timer } from '@gitroom/helpers/utils/timer';
-import { AuthTokenDetails } from '@gitroom/nestjs-libraries/integrations/social/social.integrations.interface';
+} from '@kuku/nestjs-libraries/integrations/social.abstract';
+import { BullMqClient } from '@kuku/nestjs-libraries/bull-mq-transport-new/client';
+import { timer } from '@kuku/helpers/utils/timer';
+import { AuthTokenDetails } from '@kuku/nestjs-libraries/integrations/social/social.integrations.interface';
 import utc from 'dayjs/plugin/utc';
-import { MediaService } from '@gitroom/nestjs-libraries/database/prisma/media/media.service';
-import { ShortLinkService } from '@gitroom/nestjs-libraries/short-linking/short.link.service';
-import { WebhooksService } from '@gitroom/nestjs-libraries/database/prisma/webhooks/webhooks.service';
-import { CreateTagDto } from '@gitroom/nestjs-libraries/dtos/posts/create.tag.dto';
+import { MediaService } from '@kuku/nestjs-libraries/database/prisma/media/media.service';
+import { ShortLinkService } from '@kuku/nestjs-libraries/short-linking/short.link.service';
+import { WebhooksService } from '@kuku/nestjs-libraries/database/prisma/webhooks/webhooks.service';
+import { CreateTagDto } from '@kuku/nestjs-libraries/dtos/posts/create.tag.dto';
 import axios from 'axios';
 import sharp from 'sharp';
-import { UploadFactory } from '@gitroom/nestjs-libraries/upload/upload.factory';
+import { UploadFactory } from '@kuku/nestjs-libraries/upload/upload.factory';
 import { Readable } from 'stream';
-import { OpenaiService } from '@gitroom/nestjs-libraries/openai/openai.service';
+import { OpenaiService } from '@kuku/nestjs-libraries/openai/openai.service';
 import { plainToInstance } from 'class-transformer';
 import { validate } from 'class-validator';
-import { stripHtmlValidation } from '@gitroom/helpers/utils/strip.html.validation';
+import { stripHtmlValidation } from '@kuku/helpers/utils/strip.html.validation';
 dayjs.extend(utc);
 
 type PostWithConditionals = Post & {

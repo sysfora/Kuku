@@ -4,17 +4,17 @@ import { FC } from 'react';
 import {
   PostComment,
   withProvider,
-} from '@gitroom/frontend/components/new-launch/providers/high.order.provider';
-import { DevToSettingsDto } from '@gitroom/nestjs-libraries/dtos/posts/providers-settings/dev.to.settings.dto';
-import { Input } from '@gitroom/react/form/input';
-import { MediaComponent } from '@gitroom/frontend/components/media/media.component';
-import { SelectOrganization } from '@gitroom/frontend/components/new-launch/providers/devto/select.organization';
-import { DevtoTags } from '@gitroom/frontend/components/new-launch/providers/devto/devto.tags';
-import { useMediaDirectory } from '@gitroom/react/helpers/use.media.directory';
+} from '@kuku/frontend/components/new-launch/providers/high.order.provider';
+import { DevToSettingsDto } from '@kuku/nestjs-libraries/dtos/posts/providers-settings/dev.to.settings.dto';
+import { Input } from '@kuku/react/form/input';
+import { MediaComponent } from '@kuku/frontend/components/media/media.component';
+import { SelectOrganization } from '@kuku/frontend/components/new-launch/providers/devto/select.organization';
+import { DevtoTags } from '@kuku/frontend/components/new-launch/providers/devto/devto.tags';
+import { useMediaDirectory } from '@kuku/react/helpers/use.media.directory';
 import clsx from 'clsx';
-import { Canonical } from '@gitroom/react/form/canonical';
-import { useIntegration } from '@gitroom/frontend/components/launches/helpers/use.integration';
-import { useSettings } from '@gitroom/frontend/components/launches/helpers/use.values';
+import { Canonical } from '@kuku/react/form/canonical';
+import { useIntegration } from '@kuku/frontend/components/launches/helpers/use.integration';
+import { useSettings } from '@kuku/frontend/components/launches/helpers/use.values';
 
 const DevtoSettings: FC = () => {
   const form = useSettings();

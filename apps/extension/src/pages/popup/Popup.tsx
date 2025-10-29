@@ -1,6 +1,6 @@
 import React, { FC, useCallback, useEffect, useMemo, useState } from 'react';
-import { ProviderList } from '@gitroom/extension/providers/provider.list';
-import { fetchCookie } from '@gitroom/extension/utils/load.cookie';
+import { ProviderList } from '@kuku/extension/providers/provider.list';
+import { fetchCookie } from '@kuku/extension/utils/load.cookie';
 
 export const PopupContainerContainer: FC = () => {
   const [url, setUrl] = useState<string | null>(null);

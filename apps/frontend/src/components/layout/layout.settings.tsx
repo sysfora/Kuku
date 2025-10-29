@@ -1,50 +1,50 @@
 'use client';
 
 import { ReactNode, useCallback, useEffect } from 'react';
-import { Title } from '@gitroom/frontend/components/layout/title';
-import { ContextWrapper } from '@gitroom/frontend/components/layout/user.context';
-import { TopMenu } from '@gitroom/frontend/components/layout/top.menu';
-import { MantineWrapper } from '@gitroom/react/helpers/mantine.wrapper';
-import { ToolTip } from '@gitroom/frontend/components/layout/top.tip';
-import { ShowMediaBoxModal } from '@gitroom/frontend/components/media/media.component';
+import { Title } from '@kuku/frontend/components/layout/title';
+import { ContextWrapper } from '@kuku/frontend/components/layout/user.context';
+import { TopMenu } from '@kuku/frontend/components/layout/top.menu';
+import { MantineWrapper } from '@kuku/react/helpers/mantine.wrapper';
+import { ToolTip } from '@kuku/frontend/components/layout/top.tip';
+import { ShowMediaBoxModal } from '@kuku/frontend/components/media/media.component';
 import Image from 'next/image';
-import { Toaster, useToaster } from '@gitroom/react/toaster/toaster';
-import { ShowPostSelector } from '@gitroom/frontend/components/post-url-selector/post.url.selector';
-import { OrganizationSelector } from '@gitroom/frontend/components/layout/organization.selector';
-import NotificationComponent from '@gitroom/frontend/components/notifications/notification.component';
+import { Toaster, useToaster } from '@kuku/react/toaster/toaster';
+import { ShowPostSelector } from '@kuku/frontend/components/post-url-selector/post.url.selector';
+import { OrganizationSelector } from '@kuku/frontend/components/layout/organization.selector';
+import NotificationComponent from '@kuku/frontend/components/notifications/notification.component';
 import Link from 'next/link';
 import useSWR from 'swr';
-import { useFetch } from '@gitroom/helpers/utils/custom.fetch';
+import { useFetch } from '@kuku/helpers/utils/custom.fetch';
 import utc from 'dayjs/plugin/utc';
 import weekOfYear from 'dayjs/plugin/weekOfYear';
 import isoWeek from 'dayjs/plugin/isoWeek';
 import isBetween from 'dayjs/plugin/isBetween';
-import { ShowLinkedinCompany } from '@gitroom/frontend/components/launches/helpers/linkedin.component';
-import { SettingsComponent } from '@gitroom/frontend/components/layout/settings.component';
-import { Onboarding } from '@gitroom/frontend/components/onboarding/onboarding';
-import { Support } from '@gitroom/frontend/components/layout/support';
-import { ContinueProvider } from '@gitroom/frontend/components/layout/continue.provider';
+import { ShowLinkedinCompany } from '@kuku/frontend/components/launches/helpers/linkedin.component';
+import { SettingsComponent } from '@kuku/frontend/components/layout/settings.component';
+import { Onboarding } from '@kuku/frontend/components/onboarding/onboarding';
+import { Support } from '@kuku/frontend/components/layout/support';
+import { ContinueProvider } from '@kuku/frontend/components/layout/continue.provider';
 import { CopilotKit } from '@copilotkit/react-core';
-import { Impersonate } from '@gitroom/frontend/components/layout/impersonate';
+import { Impersonate } from '@kuku/frontend/components/layout/impersonate';
 import clsx from 'clsx';
-import { BillingComponent } from '@gitroom/frontend/components/billing/billing.component';
+import { BillingComponent } from '@kuku/frontend/components/billing/billing.component';
 import dynamic from 'next/dynamic';
-import { NewSubscription } from '@gitroom/frontend/components/layout/new.subscription';
-import { useVariables } from '@gitroom/react/helpers/variable.context';
+import { NewSubscription } from '@kuku/frontend/components/layout/new.subscription';
+import { useVariables } from '@kuku/react/helpers/variable.context';
 const ModeComponent = dynamic(
-  () => import('@gitroom/frontend/components/layout/mode.component'),
+  () => import('@kuku/frontend/components/layout/mode.component'),
   {
     ssr: false,
   }
 );
 import { extend } from 'dayjs';
 import { useSearchParams } from 'next/navigation';
-import { CheckPayment } from '@gitroom/frontend/components/layout/check.payment';
-import { ChromeExtensionComponent } from '@gitroom/frontend/components/layout/chrome.extension.component';
-import { LanguageComponent } from '@gitroom/frontend/components/layout/language.component';
-import { useT } from '@gitroom/react/translation/get.transation.service.client';
-import i18next from '@gitroom/react/translation/i18next';
-import { MediaSettingsLayout } from '@gitroom/frontend/components/launches/helpers/media.settings.component';
+import { CheckPayment } from '@kuku/frontend/components/layout/check.payment';
+import { ChromeExtensionComponent } from '@kuku/frontend/components/layout/chrome.extension.component';
+import { LanguageComponent } from '@kuku/frontend/components/layout/language.component';
+import { useT } from '@kuku/react/translation/get.transation.service.client';
+import i18next from '@kuku/react/translation/i18next';
+import { MediaSettingsLayout } from '@kuku/frontend/components/launches/helpers/media.settings.component';
 extend(utc);
 extend(weekOfYear);
 extend(isoWeek);
@@ -131,7 +131,7 @@ export const LayoutSettings = ({ children }: { children: ReactNode }) => {
                       />
                     </svg>
                   ) : (
-                    'Gitroom'
+                    'Kuku'
                   )}
                 </div>
               </Link>

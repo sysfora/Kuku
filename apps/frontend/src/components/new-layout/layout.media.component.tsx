@@ -1,6 +1,6 @@
 'use client';
 
-import { MediaBox } from '@gitroom/frontend/components/media/media.component';
+import { MediaBox } from '@kuku/frontend/components/media/media.component';
 
 export const MediaLayoutComponent = () => {
   return (

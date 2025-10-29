@@ -2,8 +2,8 @@ import {
   URL,
   Video,
   VideoAbstract,
-} from '@gitroom/nestjs-libraries/videos/video.interface';
-import { timer } from '@gitroom/helpers/utils/timer';
+} from '@kuku/nestjs-libraries/videos/video.interface';
+import { timer } from '@kuku/helpers/utils/timer';
 import { ArrayMaxSize, IsArray, IsString, ValidateNested } from 'class-validator';
 import { Type } from 'class-transformer';
 

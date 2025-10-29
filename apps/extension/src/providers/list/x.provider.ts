@@ -1,4 +1,4 @@
-import { ProviderInterface } from '@gitroom/extension/providers/provider.interface';
+import { ProviderInterface } from '@kuku/extension/providers/provider.interface';
 
 export class XProvider implements ProviderInterface {
   identifier = 'x';

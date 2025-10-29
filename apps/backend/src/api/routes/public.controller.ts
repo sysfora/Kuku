@@ -10,17 +10,17 @@ import {
   StreamableFile,
 } from '@nestjs/common';
 import { ApiTags } from '@nestjs/swagger';
-import { AgenciesService } from '@gitroom/nestjs-libraries/database/prisma/agencies/agencies.service';
-import { PostsService } from '@gitroom/nestjs-libraries/database/prisma/posts/posts.service';
-import { TrackService } from '@gitroom/nestjs-libraries/track/track.service';
+import { AgenciesService } from '@kuku/nestjs-libraries/database/prisma/agencies/agencies.service';
+import { PostsService } from '@kuku/nestjs-libraries/database/prisma/posts/posts.service';
+import { TrackService } from '@kuku/nestjs-libraries/track/track.service';
 import { RealIP } from 'nestjs-real-ip';
-import { UserAgent } from '@gitroom/nestjs-libraries/user/user.agent';
-import { TrackEnum } from '@gitroom/nestjs-libraries/user/track.enum';
+import { UserAgent } from '@kuku/nestjs-libraries/user/user.agent';
+import { TrackEnum } from '@kuku/nestjs-libraries/user/track.enum';
 import { Request, Response } from 'express';
-import { makeId } from '@gitroom/nestjs-libraries/services/make.is';
-import { getCookieUrlFromDomain } from '@gitroom/helpers/subdomain/subdomain.management';
-import { AgentGraphInsertService } from '@gitroom/nestjs-libraries/agent/agent.graph.insert.service';
-import { Nowpayments } from '@gitroom/nestjs-libraries/crypto/nowpayments';
+import { makeId } from '@kuku/nestjs-libraries/services/make.is';
+import { getCookieUrlFromDomain } from '@kuku/helpers/subdomain/subdomain.management';
+import { AgentGraphInsertService } from '@kuku/nestjs-libraries/agent/agent.graph.insert.service';
+import { Nowpayments } from '@kuku/nestjs-libraries/crypto/nowpayments';
 import { Readable, pipeline } from 'stream';
 import { promisify } from 'util';
 

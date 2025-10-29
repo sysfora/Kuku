@@ -1,5 +1,5 @@
-import i18next from '@gitroom/react/translation/i18next';
-import { areYouSure } from '@gitroom/frontend/components/layout/new-modal';
+import i18next from '@kuku/react/translation/i18next';
+import { areYouSure } from '@kuku/frontend/components/layout/new-modal';
 
 export const deleteDialog = async (
   message: string,

@@ -1,7 +1,7 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import '@gitroom/extension/pages/options/index.css';
-import Options from '@gitroom/extension/pages/options/Options';
+import '@kuku/extension/pages/options/index.css';
+import Options from '@kuku/extension/pages/options/Options';
 
 function init() {
   const rootContainer = document.querySelector('#__root');

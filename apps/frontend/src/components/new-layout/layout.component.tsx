@@ -1,10 +1,10 @@
  'use client';
 
 import React, { ReactNode, useCallback } from 'react';
-import { Logo } from '@gitroom/frontend/components/new-layout/logo';
+import { Logo } from '@kuku/frontend/components/new-layout/logo';
 import { Plus_Jakarta_Sans } from 'next/font/google';
 const ModeComponent = dynamic(
-  () => import('@gitroom/frontend/components/layout/mode.component'),
+  () => import('@kuku/frontend/components/layout/mode.component'),
   {
     ssr: false,
   }
@@ -12,33 +12,33 @@ const ModeComponent = dynamic(
 
 import clsx from 'clsx';
 import dynamic from 'next/dynamic';
-import { useFetch } from '@gitroom/helpers/utils/custom.fetch';
-import { useVariables } from '@gitroom/react/helpers/variable.context';
+import { useFetch } from '@kuku/helpers/utils/custom.fetch';
+import { useVariables } from '@kuku/react/helpers/variable.context';
 import { useSearchParams } from 'next/navigation';
 import useSWR from 'swr';
-import { CheckPayment } from '@gitroom/frontend/components/layout/check.payment';
-import { ToolTip } from '@gitroom/frontend/components/layout/top.tip';
-import { ShowMediaBoxModal } from '@gitroom/frontend/components/media/media.component';
-import { ShowLinkedinCompany } from '@gitroom/frontend/components/launches/helpers/linkedin.component';
-import { MediaSettingsLayout } from '@gitroom/frontend/components/launches/helpers/media.settings.component';
-import { Toaster } from '@gitroom/react/toaster/toaster';
-import { ShowPostSelector } from '@gitroom/frontend/components/post-url-selector/post.url.selector';
-import { NewSubscription } from '@gitroom/frontend/components/layout/new.subscription';
-import { Support } from '@gitroom/frontend/components/layout/support';
-import { ContinueProvider } from '@gitroom/frontend/components/layout/continue.provider';
-import { ContextWrapper } from '@gitroom/frontend/components/layout/user.context';
+import { CheckPayment } from '@kuku/frontend/components/layout/check.payment';
+import { ToolTip } from '@kuku/frontend/components/layout/top.tip';
+import { ShowMediaBoxModal } from '@kuku/frontend/components/media/media.component';
+import { ShowLinkedinCompany } from '@kuku/frontend/components/launches/helpers/linkedin.component';
+import { MediaSettingsLayout } from '@kuku/frontend/components/launches/helpers/media.settings.component';
+import { Toaster } from '@kuku/react/toaster/toaster';
+import { ShowPostSelector } from '@kuku/frontend/components/post-url-selector/post.url.selector';
+import { NewSubscription } from '@kuku/frontend/components/layout/new.subscription';
+import { Support } from '@kuku/frontend/components/layout/support';
+import { ContinueProvider } from '@kuku/frontend/components/layout/continue.provider';
+import { ContextWrapper } from '@kuku/frontend/components/layout/user.context';
 import { CopilotKit } from '@copilotkit/react-core';
-import { MantineWrapper } from '@gitroom/react/helpers/mantine.wrapper';
-import { Impersonate } from '@gitroom/frontend/components/layout/impersonate';
-import { Title } from '@gitroom/frontend/components/layout/title';
-import { TopMenu } from '@gitroom/frontend/components/layout/top.menu';
-import { LanguageComponent } from '@gitroom/frontend/components/layout/language.component';
-import { ChromeExtensionComponent } from '@gitroom/frontend/components/layout/chrome.extension.component';
-import NotificationComponent from '@gitroom/frontend/components/notifications/notification.component';
-import { BillingAfter } from '@gitroom/frontend/components/new-layout/billing.after';
-import { OrganizationSelector } from '@gitroom/frontend/components/layout/organization.selector';
-import { PreConditionComponent } from '@gitroom/frontend/components/layout/pre-condition.component';
- import { AttachToFeedbackIcon } from '@gitroom/frontend/components/new-layout/sentry.feedback.component';
+import { MantineWrapper } from '@kuku/react/helpers/mantine.wrapper';
+import { Impersonate } from '@kuku/frontend/components/layout/impersonate';
+import { Title } from '@kuku/frontend/components/layout/title';
+import { TopMenu } from '@kuku/frontend/components/layout/top.menu';
+import { LanguageComponent } from '@kuku/frontend/components/layout/language.component';
+import { ChromeExtensionComponent } from '@kuku/frontend/components/layout/chrome.extension.component';
+import NotificationComponent from '@kuku/frontend/components/notifications/notification.component';
+import { BillingAfter } from '@kuku/frontend/components/new-layout/billing.after';
+import { OrganizationSelector } from '@kuku/frontend/components/layout/organization.selector';
+import { PreConditionComponent } from '@kuku/frontend/components/layout/pre-condition.component';
+ import { AttachToFeedbackIcon } from '@kuku/frontend/components/new-layout/sentry.feedback.component';
 
 const jakartaSans = Plus_Jakarta_Sans({
   weight: ['600', '500'],

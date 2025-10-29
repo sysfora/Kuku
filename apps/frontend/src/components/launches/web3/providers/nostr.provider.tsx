@@ -2,12 +2,12 @@
 
 import '@neynar/react/dist/style.css';
 import React, { FC, useMemo, useState, useCallback, useEffect } from 'react';
-import { Web3ProviderInterface } from '@gitroom/frontend/components/launches/web3/web3.provider.interface';
-import { useVariables } from '@gitroom/react/helpers/variable.context';
-import { TopTitle } from '@gitroom/frontend/components/launches/helpers/top.title.component';
-import { useModals } from '@gitroom/frontend/components/layout/new-modal';
-import { LoadingComponent } from '@gitroom/frontend/components/layout/loading';
-import { ButtonCaster } from '@gitroom/frontend/components/auth/providers/farcaster.provider';
+import { Web3ProviderInterface } from '@kuku/frontend/components/launches/web3/web3.provider.interface';
+import { useVariables } from '@kuku/react/helpers/variable.context';
+import { TopTitle } from '@kuku/frontend/components/launches/helpers/top.title.component';
+import { useModals } from '@kuku/frontend/components/layout/new-modal';
+import { LoadingComponent } from '@kuku/frontend/components/layout/loading';
+import { ButtonCaster } from '@kuku/frontend/components/auth/providers/farcaster.provider';
 export const WrapcasterProvider: FC<Web3ProviderInterface> = (props) => {
   const [_, state] = props.nonce.split('||');
   const modal = useModals();

@@ -10,16 +10,16 @@ import {
 } from '@nestjs/common';
 import { Response, Request } from 'express';
 
-import { CreateOrgUserDto } from '@gitroom/nestjs-libraries/dtos/auth/create.org.user.dto';
-import { LoginUserDto } from '@gitroom/nestjs-libraries/dtos/auth/login.user.dto';
-import { AuthService } from '@gitroom/backend/services/auth/auth.service';
-import { ForgotReturnPasswordDto } from '@gitroom/nestjs-libraries/dtos/auth/forgot-return.password.dto';
-import { ForgotPasswordDto } from '@gitroom/nestjs-libraries/dtos/auth/forgot.password.dto';
+import { CreateOrgUserDto } from '@kuku/nestjs-libraries/dtos/auth/create.org.user.dto';
+import { LoginUserDto } from '@kuku/nestjs-libraries/dtos/auth/login.user.dto';
+import { AuthService } from '@kuku/backend/services/auth/auth.service';
+import { ForgotReturnPasswordDto } from '@kuku/nestjs-libraries/dtos/auth/forgot-return.password.dto';
+import { ForgotPasswordDto } from '@kuku/nestjs-libraries/dtos/auth/forgot.password.dto';
 import { ApiTags } from '@nestjs/swagger';
-import { getCookieUrlFromDomain } from '@gitroom/helpers/subdomain/subdomain.management';
-import { EmailService } from '@gitroom/nestjs-libraries/services/email.service';
+import { getCookieUrlFromDomain } from '@kuku/helpers/subdomain/subdomain.management';
+import { EmailService } from '@kuku/nestjs-libraries/services/email.service';
 import { RealIP } from 'nestjs-real-ip';
-import { UserAgent } from '@gitroom/nestjs-libraries/user/user.agent';
+import { UserAgent } from '@kuku/nestjs-libraries/user/user.agent';
 import { Provider } from '@prisma/client';
 
 @ApiTags('Auth')

@@ -1,10 +1,10 @@
 'use client';
 
 import { FC, ReactNode } from 'react';
-import { useUser } from '@gitroom/frontend/components/layout/user.context';
-import { useVariables } from '@gitroom/react/helpers/variable.context';
-import { useT } from '@gitroom/react/translation/get.transation.service.client';
-import { MenuItem } from '@gitroom/frontend/components/new-layout/menu-item';
+import { useUser } from '@kuku/frontend/components/layout/user.context';
+import { useVariables } from '@kuku/react/helpers/variable.context';
+import { useT } from '@kuku/react/translation/get.transation.service.client';
+import { MenuItem } from '@kuku/frontend/components/new-layout/menu-item';
 
 interface MenuItemInterface {
   name: string;

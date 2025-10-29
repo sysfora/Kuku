@@ -1,10 +1,10 @@
 import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { ApiTags } from '@nestjs/swagger';
-import { MessagesService } from '@gitroom/nestjs-libraries/database/prisma/marketplace/messages.service';
-import { GetUserFromRequest } from '@gitroom/nestjs-libraries/user/user.from.request';
+import { MessagesService } from '@kuku/nestjs-libraries/database/prisma/marketplace/messages.service';
+import { GetUserFromRequest } from '@kuku/nestjs-libraries/user/user.from.request';
 import { Organization, User } from '@prisma/client';
-import { AddMessageDto } from '@gitroom/nestjs-libraries/dtos/messages/add.message';
-import { GetOrgFromRequest } from '@gitroom/nestjs-libraries/user/org.from.request';
+import { AddMessageDto } from '@kuku/nestjs-libraries/dtos/messages/add.message';
+import { GetOrgFromRequest } from '@kuku/nestjs-libraries/user/org.from.request';
 
 @ApiTags('Messages')
 @Controller('/messages')

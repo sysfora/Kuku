@@ -3,12 +3,12 @@ import {
   PostDetails,
   PostResponse,
   SocialProvider,
-} from '@gitroom/nestjs-libraries/integrations/social/social.integrations.interface';
-import { makeId } from '@gitroom/nestjs-libraries/services/make.is';
-import { SocialAbstract } from '@gitroom/nestjs-libraries/integrations/social.abstract';
+} from '@kuku/nestjs-libraries/integrations/social/social.integrations.interface';
+import { makeId } from '@kuku/nestjs-libraries/services/make.is';
+import { SocialAbstract } from '@kuku/nestjs-libraries/integrations/social.abstract';
 import { Integration } from '@prisma/client';
-import { DiscordDto } from '@gitroom/nestjs-libraries/dtos/posts/providers-settings/discord.dto';
-import { Tool } from '@gitroom/nestjs-libraries/integrations/tool.decorator';
+import { DiscordDto } from '@kuku/nestjs-libraries/dtos/posts/providers-settings/discord.dto';
+import { Tool } from '@kuku/nestjs-libraries/integrations/tool.decorator';
 
 export class DiscordProvider extends SocialAbstract implements SocialProvider {
   override maxConcurrentJob = 5; // Discord has generous rate limits for webhook posting

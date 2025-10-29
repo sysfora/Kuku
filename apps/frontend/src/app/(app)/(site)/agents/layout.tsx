@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { Agent } from '@gitroom/frontend/components/agents/agent';
+import { Agent } from '@kuku/frontend/components/agents/agent';
 export const metadata: Metadata = {
   title: 'Kuku - Agent',
   description: '',

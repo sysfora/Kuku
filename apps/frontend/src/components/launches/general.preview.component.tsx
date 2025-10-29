@@ -1,12 +1,12 @@
-import { useIntegration } from '@gitroom/frontend/components/launches/helpers/use.integration';
-import { useMediaDirectory } from '@gitroom/react/helpers/use.media.directory';
+import { useIntegration } from '@kuku/frontend/components/launches/helpers/use.integration';
+import { useMediaDirectory } from '@kuku/react/helpers/use.media.directory';
 import clsx from 'clsx';
-import { VideoOrImage } from '@gitroom/react/helpers/video.or.image';
+import { VideoOrImage } from '@kuku/react/helpers/video.or.image';
 import { FC } from 'react';
-import { textSlicer } from '@gitroom/helpers/utils/count.length';
+import { textSlicer } from '@kuku/helpers/utils/count.length';
 import Image from 'next/image';
-import { useLaunchStore } from '@gitroom/frontend/components/new-launch/store';
-import { stripHtmlValidation } from '@gitroom/helpers/utils/strip.html.validation';
+import { useLaunchStore } from '@kuku/frontend/components/new-launch/store';
+import { stripHtmlValidation } from '@kuku/helpers/utils/strip.html.validation';
 
 export const GeneralPreviewComponent: FC<{
   maximumCharacters?: number;

@@ -1,19 +1,19 @@
 'use client';
 
 import { FC, FormEvent, useCallback, useMemo, useState } from 'react';
-import { useCustomProviderFunction } from '@gitroom/frontend/components/launches/helpers/use.custom.provider.function';
-import { Input } from '@gitroom/react/form/input';
+import { useCustomProviderFunction } from '@kuku/frontend/components/launches/helpers/use.custom.provider.function';
+import { Input } from '@kuku/react/form/input';
 import { useDebouncedCallback } from 'use-debounce';
-import { Button } from '@gitroom/react/form/button';
+import { Button } from '@kuku/react/form/button';
 import clsx from 'clsx';
-import { MultiMediaComponent } from '@gitroom/frontend/components/media/media.component';
+import { MultiMediaComponent } from '@kuku/frontend/components/media/media.component';
 import { useWatch } from 'react-hook-form';
-import { Select } from '@gitroom/react/form/select';
-import { useSettings } from '@gitroom/frontend/components/launches/helpers/use.values';
-import { Canonical } from '@gitroom/react/form/canonical';
-import { useIntegration } from '@gitroom/frontend/components/launches/helpers/use.integration';
-import { useT } from '@gitroom/react/translation/get.transation.service.client';
-import { useLaunchStore } from '@gitroom/frontend/components/new-launch/store';
+import { Select } from '@kuku/react/form/select';
+import { useSettings } from '@kuku/frontend/components/launches/helpers/use.values';
+import { Canonical } from '@kuku/react/form/canonical';
+import { useIntegration } from '@kuku/frontend/components/launches/helpers/use.integration';
+import { useT } from '@kuku/react/translation/get.transation.service.client';
+import { useLaunchStore } from '@kuku/frontend/components/new-launch/store';
 export const RenderOptions: FC<{
   options: Array<'self' | 'link' | 'media'>;
   onClick: (current: 'self' | 'link' | 'media') => void;

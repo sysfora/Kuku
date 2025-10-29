@@ -2,18 +2,18 @@
 import 'reflect-metadata';
 
 import React, { FC, Fragment, useCallback, useMemo, useState } from 'react';
-import { useFetch } from '@gitroom/helpers/utils/custom.fetch';
+import { useFetch } from '@kuku/helpers/utils/custom.fetch';
 import useSWR from 'swr';
-import { useUser } from '@gitroom/frontend/components/layout/user.context';
-import { Button } from '@gitroom/react/form/button';
-import { Input } from '@gitroom/react/form/input';
-import { useToaster } from '@gitroom/react/toaster/toaster';
+import { useUser } from '@kuku/frontend/components/layout/user.context';
+import { Button } from '@kuku/react/form/button';
+import { Input } from '@kuku/react/form/input';
+import { useToaster } from '@kuku/react/toaster/toaster';
 import clsx from 'clsx';
-import { deleteDialog } from '@gitroom/react/helpers/delete.dialog';
-import { useT } from '@gitroom/react/translation/get.transation.service.client';
-import { AddEditModal } from '@gitroom/frontend/components/new-launch/add.edit.modal';
-import { newDayjs } from '@gitroom/frontend/components/layout/set.timezone';
-import { useModals } from '@gitroom/frontend/components/layout/new-modal';
+import { deleteDialog } from '@kuku/react/helpers/delete.dialog';
+import { useT } from '@kuku/react/translation/get.transation.service.client';
+import { AddEditModal } from '@kuku/frontend/components/new-launch/add.edit.modal';
+import { newDayjs } from '@kuku/frontend/components/layout/set.timezone';
+import { useModals } from '@kuku/frontend/components/layout/new-modal';
 
 const SaveSetModal: FC<{
   postData: any;

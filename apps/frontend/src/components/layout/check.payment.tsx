@@ -1,8 +1,8 @@
 import { FC, useCallback, useEffect, useState } from 'react';
 import Loading from 'react-loading';
-import { useFetch } from '@gitroom/helpers/utils/custom.fetch';
-import { timer } from '@gitroom/helpers/utils/timer';
-import { useToaster } from '@gitroom/react/toaster/toaster';
+import { useFetch } from '@kuku/helpers/utils/custom.fetch';
+import { timer } from '@kuku/helpers/utils/timer';
+import { useToaster } from '@kuku/react/toaster/toaster';
 export const CheckPayment: FC<{
   check: string;
   mutate: () => void;

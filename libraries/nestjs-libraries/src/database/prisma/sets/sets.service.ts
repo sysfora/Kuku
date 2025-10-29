@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
-import { SetsRepository } from '@gitroom/nestjs-libraries/database/prisma/sets/sets.repository';
-import { SetsDto } from '@gitroom/nestjs-libraries/dtos/sets/sets.dto';
+import { SetsRepository } from '@kuku/nestjs-libraries/database/prisma/sets/sets.repository';
+import { SetsDto } from '@kuku/nestjs-libraries/dtos/sets/sets.dto';
 
 @Injectable()
 export class SetsService {

@@ -1,19 +1,19 @@
-import { AgentToolInterface } from '@gitroom/nestjs-libraries/chat/agent.tool.interface';
+import { AgentToolInterface } from '@kuku/nestjs-libraries/chat/agent.tool.interface';
 import { createTool } from '@mastra/core/tools';
 import { z } from 'zod';
 import { Injectable } from '@nestjs/common';
 import {
   IntegrationManager,
   socialIntegrationList,
-} from '@gitroom/nestjs-libraries/integrations/integration.manager';
+} from '@kuku/nestjs-libraries/integrations/integration.manager';
 import { validationMetadatasToSchemas } from 'class-validator-jsonschema';
-import { IntegrationService } from '@gitroom/nestjs-libraries/database/prisma/integrations/integration.service';
-import { RefreshToken } from '@gitroom/nestjs-libraries/integrations/social.abstract';
-import { timer } from '@gitroom/helpers/utils/timer';
-import { MediaService } from '@gitroom/nestjs-libraries/database/prisma/media/media.service';
-import { OrganizationService } from '@gitroom/nestjs-libraries/database/prisma/organizations/organization.service';
-import { VideoManager } from '@gitroom/nestjs-libraries/videos/video.manager';
-import { checkAuth } from '@gitroom/nestjs-libraries/chat/auth.context';
+import { IntegrationService } from '@kuku/nestjs-libraries/database/prisma/integrations/integration.service';
+import { RefreshToken } from '@kuku/nestjs-libraries/integrations/social.abstract';
+import { timer } from '@kuku/helpers/utils/timer';
+import { MediaService } from '@kuku/nestjs-libraries/database/prisma/media/media.service';
+import { OrganizationService } from '@kuku/nestjs-libraries/database/prisma/organizations/organization.service';
+import { VideoManager } from '@kuku/nestjs-libraries/videos/video.manager';
+import { checkAuth } from '@kuku/nestjs-libraries/chat/auth.context';
 
 @Injectable()
 export class GenerateVideoTool implements AgentToolInterface {

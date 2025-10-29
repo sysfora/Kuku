@@ -1,11 +1,11 @@
 'use client';
 
-import { useFetch } from '@gitroom/helpers/utils/custom.fetch';
-import { LoadingComponent } from '@gitroom/frontend/components/layout/loading';
+import { useFetch } from '@kuku/helpers/utils/custom.fetch';
+import { LoadingComponent } from '@kuku/frontend/components/layout/loading';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
-import { useT } from '@gitroom/react/translation/get.transation.service.client';
+import { useT } from '@kuku/react/translation/get.transation.service.client';
 export const AfterActivate = () => {
   const fetch = useFetch();
   const params = useParams();

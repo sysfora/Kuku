@@ -1,9 +1,9 @@
-import { videoWrapper } from '@gitroom/frontend/components/videos/video.wrapper';
+import { videoWrapper } from '@kuku/frontend/components/videos/video.wrapper';
 import { FC, useState } from 'react';
 import { useFormContext } from 'react-hook-form';
-import { useVideo } from '@gitroom/frontend/components/videos/video.context.wrapper';
-import { Textarea } from '@gitroom/react/form/textarea';
-import { MultiMediaComponent } from '@gitroom/frontend/components/media/media.component';
+import { useVideo } from '@kuku/frontend/components/videos/video.context.wrapper';
+import { Textarea } from '@kuku/react/form/textarea';
+import { MultiMediaComponent } from '@kuku/frontend/components/media/media.component';
 
 export interface Voice {
   id: string;

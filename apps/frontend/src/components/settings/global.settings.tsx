@@ -1,11 +1,11 @@
 'use client';
 
 import React from 'react';
-import { useT } from '@gitroom/react/translation/get.transation.service.client';
+import { useT } from '@kuku/react/translation/get.transation.service.client';
 import dynamic from 'next/dynamic';
 
 const MetricComponent = dynamic(
-  () => import('@gitroom/frontend/components/settings/metric.component'),
+  () => import('@kuku/frontend/components/settings/metric.component'),
   {
     ssr: false,
   }

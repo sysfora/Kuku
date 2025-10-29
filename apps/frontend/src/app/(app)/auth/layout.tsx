@@ -1,11 +1,11 @@
-import { getT } from '@gitroom/react/translation/get.translation.service.backend';
+import { getT } from '@kuku/react/translation/get.translation.service.backend';
 
 export const dynamic = 'force-dynamic';
 import { ReactNode } from 'react';
 import Image from 'next/image';
 import clsx from 'clsx';
 import loadDynamic from 'next/dynamic';
-import { isGeneralServerSide } from '@gitroom/helpers/utils/is.general.server.side';
+import { isGeneralServerSide } from '@kuku/helpers/utils/is.general.server.side';
 const ReturnUrlComponent = loadDynamic(() => import('./return.url.component'));
 export default async function AuthLayout({
   children,
@@ -59,7 +59,7 @@ export default async function AuthLayout({
                     />
                   </svg>
                 ) : (
-                  <div className="text-[40px]">{t('gitroom', 'Gitroom')}</div>
+                  <div className="text-[40px]">{t('kuku', 'Kuku')}</div>
                 )}
               </div>
             </div>

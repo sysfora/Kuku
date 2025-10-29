@@ -3,9 +3,9 @@ import {
   PostDetails,
   PostResponse,
   SocialProvider,
-} from '@gitroom/nestjs-libraries/integrations/social/social.integrations.interface';
-import { makeId } from '@gitroom/nestjs-libraries/services/make.is';
-import { SocialAbstract } from '@gitroom/nestjs-libraries/integrations/social.abstract';
+} from '@kuku/nestjs-libraries/integrations/social/social.integrations.interface';
+import { makeId } from '@kuku/nestjs-libraries/services/make.is';
+import { SocialAbstract } from '@kuku/nestjs-libraries/integrations/social.abstract';
 import dayjs from 'dayjs';
 
 export class MastodonProvider extends SocialAbstract implements SocialProvider {

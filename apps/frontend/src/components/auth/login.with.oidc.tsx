@@ -1,8 +1,8 @@
 'use client';
 
-import { OauthProvider } from '@gitroom/frontend/components/auth/providers/oauth.provider';
-import { useT } from '@gitroom/react/translation/get.transation.service.client';
-import { useVariables } from '@gitroom/react/helpers/variable.context';
+import { OauthProvider } from '@kuku/frontend/components/auth/providers/oauth.provider';
+import { useT } from '@kuku/react/translation/get.transation.service.client';
+import { useVariables } from '@kuku/react/helpers/variable.context';
 
 export const LoginWithOidc = () => {
   const { isGeneral, genericOauth } = useVariables();
