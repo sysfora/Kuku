@@ -1,10 +1,10 @@
 {
-  "name": "postiz-frontend",
+  "name": "kuku-frontend",
   "version": "1.0.0",
   "description": "",
   "type": "module",
   "scripts": {
-    "dev": "dotenv -e ../../.env -- next dev -p 4200",
+    "dev": "dotenv -e ../../.env -- next dev -p 3000",
     "build": "next build",
     "build:sentry": "dotenv -e ../../.env -- next build",
     "start": "dotenv -e ../../.env -- next start -p 4200",

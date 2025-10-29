@@ -65,6 +65,11 @@ export async function middleware(request: NextRequest) {
   const org = nextUrl.searchParams.get('org');
   const url = new URL(nextUrl).search;
   if (nextUrl.href.indexOf('/auth') === -1 && !authCookie) {
+    // Allow root path to show Hello World without authentication
+    if (nextUrl.pathname === '/') {
+      return topResponse;
+    }
+    
     const providers = ['google', 'settings'];
     const findIndex = providers.find((p) => nextUrl.href.indexOf(p) > -1);
     const additional = !findIndex
@@ -133,13 +138,9 @@ export async function middleware(request: NextRequest) {
       }
       return redirect;
     }
+    // Allow root path to show Hello World for both authenticated and unauthenticated users
     if (nextUrl.pathname === '/') {
-      return NextResponse.redirect(
-        new URL(
-          !!process.env.IS_GENERAL ? '/launches' : `/analytics`,
-          nextUrl.href
-        )
-      );
+      return topResponse;
     }
 
     return topResponse;

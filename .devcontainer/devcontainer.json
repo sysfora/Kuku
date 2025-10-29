@@ -1,6 +1,6 @@
 {
-	"name": "Postiz Dev Container",
-	"image": "localhost/postiz-devcontainer",
+	"name": "Kuku Dev Container",
+	"image": "localhost/kuku-devcontainer",
 	"features": {},
 	"customizations": {
 		"vscode": {
