@@ -96,7 +96,7 @@ export const LayoutSettings = ({ children }: { children: ReactNode }) => {
               >
                 <div className="min-w-[55px]">
                   <Image
-                    src={isGeneral ? '/kuku.svg' : '/logo.svg'}
+                    src={isGeneral ? '/kuku.png' : '/logo.png'}
                     width={55}
                     height={53}
                     alt="Logo"
