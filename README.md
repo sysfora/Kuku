@@ -5,7 +5,8 @@
 </p>
 
 <p align="center">
-  <img src="https://github.com/sysfora/kuku/blob/main/Logo.png" alt="Kuku Social Logo" width="400">
+  <img src="https://github.com/sysfora/Kuku/blob/main/apps/frontend/public/WhiteLogo.png#gh-light-mode-only" alt="Kuku Social Logo" width="400">
+  <img src="https://github.com/sysfora/Kuku/blob/main/apps/frontend/public/BlackLogo.png#gh-dark-mode-only" alt="Kuku Social Logo" width="400">
 </p>
 
 <div align="center">
